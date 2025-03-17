@@ -1,0 +1,183 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Jeremiah Givens
+% Based off of: https://github.com/sb2nov/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym,amsmath}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear header/footer
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{ }{0em}{ }[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1 \vspace{-2pt}}%
+}
+
+% New command: Project Entry with role in blue
+\newcommand{\resumeProjectEntry}[3]{%
+    \vspace{-2pt}\item%
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}%
+      \textbf{#1} \quad {\small \textcolor{blue}{#2}} & \textit{#3} \\%
+    \end{tabular*}\vspace{-5pt}%
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\setParameters}{%
+	\vspace{-4pt}%
+	\setlength{\itemsep}{0pt}%
+	\setlength{\parskip}{0pt}%
+}
+
+\begin{document}
+\begin{center}	
+	\Large{\textsc{Jeremiah Givens}} \\
+	(719)850-8817 $|$ jeremiahgivens149@gmail.com $|$ Huntsville, AL \\
+	\blue{\href{https://github.com/jeremiahgivens?tab=repositories}{GitHub: github.com/jeremiahgivens}}
+\end{center}
+
+\section{\hfill\Large{Experience}}
+
+% --- Blue Halo ---
+\underline{\textbf{Blue Halo}}\\[0.1cm]
+\resumeSubHeadingListStart
+\resumeProjectEntry{Advanced Stinger Trainer}{Software Engineer}{January 2024 -- Present}
+  \begin{itemize}
+    \setParameters
+    \item Architected and developed the Advanced Stinger Trainer—a cutting-edge, highly realistic Stinger simulator leveraging VRSG technology and dome projection for immersive training.
+    \item Engineered a modular simulation system in C++ and Qt, facilitating efficient data sharing among multiple applications via TCP/UDP protocols.
+    \item Developed advanced UI components in Qt and implemented algorithms to compute operators' aim points using positional and orientation data from Optitrack.
+    \item Created custom VRSG plugins for HUD overlays and view warping, including writing vertex and pixel shaders.
+    \item Designed and implemented a Computer Assisted Instruction (CAI) system to streamline training processes and enhance learning outcomes.
+    \item Established and maintained a robust CMake build system for a suite of 10+ applications, and authored deployment scripts for multi-computer setups.
+  \end{itemize}
+
+\resumeProjectEntry{Mission Rehearsal Tool}{Software Engineer}{October 2022 -- January 2024}
+  \begin{itemize}
+    \setParameters
+    \item Developed and maintained Mission Rehearsal Tool—an advanced terrain development software, image generator, and military mission planning tool written in Unity.
+    \item Enabled the tool to ingest georeferenced images and elevation data (in various formats) to create accurate terrains.
+    \item Ported Yolov5 from Python to C\# and Unity, and trained a custom model to identify and delineate vegetation boundaries for automated placement of 3D vegetation models.
+    \item Integrated data from Bing Maps and ESRI to generate realistic terrains, and leveraged OpenStreetMap data to accurately position building models.
+    \item Collaborated with multidisciplinary teams to optimize simulation parameters and enhance the user experience.
+  \end{itemize}
+\resumeSubHeadingListEnd
+
+% --- Dynetics Technical Solutions ---
+\underline{\textbf{Dynetics Technical Solutions}}\\[0.1cm]
+\resumeSubHeadingListStart
+\resumeProjectEntry{Hypersonic Systems Integration Lab}{Principal Investigator}{January 2022 -- September 2022}
+  \begin{itemize}
+    \setParameters
+    \item Led an Internal Research and Development (IRAD) project, coordinating a cross-disciplinary team to design and develop a Hardware-in-the-Loop (HWIL) simulator for new technology insertions in the Hypersonic Glide Body.
+    \item Designed custom PCBs for sensor simulation and digital/analog I/O interfacing; developed embedded software on STM32 microcontrollers for real-time sensor simulation.
+    \item Oversaw the construction and testing of HWIL assemblies, ensuring seamless integration and performance validation.
+  \end{itemize}
+
+\resumeProjectEntry{Hypersonic Glide Body}{HWIL Lead}{October 2019 -- May 2021}
+  \begin{itemize}
+    \setParameters
+    \item Managed the design, construction, and testing of six Common Hypersonic Glide Body HWIL simulators.
+    \item Led the development of real-time software and coordinated the distribution of technical documentation to customers and industry partners.
+    \item Oversaw delivery, integration, and final testing at multiple customer sites; authored contract close-out documentation and comprehensive project briefs for Army and Navy customers.
+    \item Prepared basis of estimate (BOE) documents for additional HWIL work, upgrades, and repairs.
+  \end{itemize}
+\resumeSubHeadingListEnd
+\newpage
+\resumeSubHeadingListStart
+\resumeProjectEntry{Hypersonic Glide Body}{Real-Time Software Engineer}{October 2019 -- May 2021}
+  \begin{itemize}
+    \setParameters
+    \item Developed real-time simulation software for HWIL systems in the Hypersonic Glide Body project.
+    \item Created Simulink models for electrical component validation and assisted in testing HWIL electrical components.
+    \item Developed GUIs and command-line tools for remote control of power distribution units and supplies; maintained version control of all HWIL software using GIT.
+  \end{itemize}
+\resumeSubHeadingListEnd
+
+% --- Dynetics ---
+\underline{\textbf{Dynetics}}\\[0.1cm]
+\resumeSubHeadingListStart
+\resumeProjectEntry{Radar}{Analyst}{February 2020 -- September 2020}
+  \begin{itemize}
+    \setParameters
+    \item Analyzed radar data as part of the AN/TPY-2 Radar Development Contract (RDC) with Raytheon.
+    \item Supported simulated radar data generation and analysis, enhancing discrimination algorithm performance.
+    \item Developed MATLAB and Python tools for processing and analyzing simulated radar data.
+    \item Automated figure generation and PowerPoint presentation creation through custom scripting.
+    \item Implemented Naive and non-Naive Bayes classifiers, as well as Feedforward Neural Networks, for radar data classification.
+  \end{itemize}
+\resumeSubHeadingListEnd
+
+% --- Johns Hopkins University Applied Physics Laboratory ---
+\underline{\textbf{Johns Hopkins University Applied Physics Laboratory}}\\[0.1cm]
+\resumeSubHeadingListStart
+\resumeProjectEntry{Research Scientist}{Intern}{May 2018 -- August 2018}
+  \begin{itemize}
+    \setParameters
+    \item Conducted physical and synthetic chemistry research focused on chemical weapons detection.
+    \item Operated and evaluated military-grade chemical sensors.
+    \item Developed multiple GUIs for data acquisition and analysis using MATLAB and LabVIEW.
+    \item Interfaced with lab equipment (multimeters, power supplies, barometers) and evaluated prototype systems including photoacoustic laser spectrometers and quantum tunneling-based chemical sensors.
+  \end{itemize}
+\resumeSubHeadingListEnd
+
+\section{\hfill\Large{Education}}
+\underline{\textbf{Adams State University}} \\
+B.S. in Chemical Physics (with Minor in Mathematics) \hfill May 2019 \\
+GPA: 3.78 (transcript available upon request) \\[5pt]
+\underline{\textbf{University of Alabama in Huntsville}} \\
+Graduate Coursework in Mathematics and Computer Engineering \\
+(Completed approximately 50\% of the program with strong performance) \\[5pt]
+
+\section{\hfill\Large{Skills}}
+\textbf{Computer:} Proficient in working across all major operating systems (Windows, Linux, macOS). Extensive experience writing code to interface with a wide variety of lab instruments for data acquisition and control. Skilled in embedded software development on STM32 MCUs, algorithm development, and automation using Python and MATLAB. Proficient with robust build systems (CMake) and version control (GIT). \\[4pt]
+\textbf{Hardware:} Proficient in operating electronics lab equipment (oscilloscopes, PDUs, power supplies, multimeters, function generators, digital logic analyzers, etc.) and PCB schematic design/layout for microcontroller-based systems. \\[4pt]
+\textbf{Programming Languages:} C\#, C/C++, Java, LaTeX, MATLAB, Python, Swift \\[4pt]
+\textbf{Expertise:} Extensive experience with Unity, terrain development, simulation software (image generation and military mission planning), physics-based simulations, advanced mathematical modeling, machine learning model training and deployment, GUI development with Qt, and custom software integration.
+
+\end{document}
